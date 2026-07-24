@@ -1,0 +1,590 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:#FFFDF8;
+
+    color:#444;
+
+    font-family:'Nunito',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+/* ===========================
+   SCROLLING BACKGROUND
+=========================== */
+
+.scrolling-background{
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:url("images/scroll.png");
+
+    background-repeat:repeat;
+
+    background-size:180px;
+
+    animation:scrollBackground 25s linear infinite;
+
+    z-index:-999;
+
+    opacity:.20;
+
+    pointer-events:none;
+
+}
+
+/* ===========================
+   CONFETTI
+=========================== */
+
+#confetti-container{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:500;
+
+}
+
+.confetti{
+
+    position:absolute;
+
+    top:-30px;
+
+    border-radius:999px;
+
+    opacity:.9;
+
+    animation-name:fall;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+}
+
+@keyframes fall{
+
+    0%{
+
+        transform:
+            translateY(-40px)
+            rotate(0deg);
+
+    }
+
+    100%{
+
+        transform:
+            translateY(calc(100vh + 100px))
+            rotate(720deg);
+
+    }
+
+}
+
+@keyframes scrollBackground{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:-220px -220px;
+
+    }
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+
+.hero{
+
+    min-height:75vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+.hero-sticker{
+
+    filter:drop-shadow(0 8px 18px rgba(0,0,0,.20));
+
+}
+
+.hero-divider{
+
+    display:block;
+
+    width:500px; /* change this if you want it bigger/smaller */
+
+    height:auto;
+
+    margin:0 auto 1px auto;
+
+    user-select:none;
+
+    pointer-events:none;
+
+}
+
+.hero h1{
+
+    font-family:'Quicksand',sans-serif;
+
+    font-size:4rem;
+
+    color:#FF9233;
+
+    margin-bottom:29px;
+
+}
+
+.hero p{
+
+    font-size:1.3rem;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+
+.section{
+
+    width:min(1050px,92%);
+
+    margin:60px auto;
+
+    padding:55px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border-radius:35px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+.section h2{
+
+    text-align:center;
+
+    font-family:'Quicksand',sans-serif;
+
+    color:#21878A;
+
+    margin-bottom:30px;
+
+    font-size:2rem;
+
+}
+
+.section-description{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    line-height:1.8;
+
+}
+
+/* ===========================
+   GALLERY
+=========================== */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card img{
+
+    width:100%;
+
+    display:block;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.card img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ===========================
+   VIDEO
+=========================== */
+
+.video-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.video-card video{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+}
+
+/* ===========================
+   LETTER
+=========================== */
+
+.letter{
+
+    background:transparent;
+
+    padding:0;
+
+    border-radius:0;
+
+    box-shadow:none;
+
+}
+
+.letter p{
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    font-size:1.05rem;
+
+    color:#555;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:#777;
+
+    font-family:'Quicksand',sans-serif;
+
+    font-size:1rem;
+
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.82);
+
+    backdrop-filter:blur(10px);
+
+    z-index:9999;
+
+    padding:40px;
+
+    animation:fadeIn .25s ease;
+
+}
+
+.lightbox-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    max-width:90vw;
+
+    animation:zoomIn .25s ease;
+
+}
+
+#lightbox-image{
+
+    max-width:90vw;
+
+    max-height:75vh;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+#lightbox-title{
+
+    margin-top:20px;
+
+    font-family:'Quicksand',sans-serif;
+
+    color:white;
+
+    font-size:2rem;
+
+    text-align:center;
+
+}
+
+#lightbox-caption{
+
+    margin-top:12px;
+
+    color:white;
+
+    text-align:center;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    opacity:.92;
+
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes zoomIn{
+
+    from{
+
+        transform:scale(.92);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:768px){
+
+    .hero{
+
+        min-height:60vh;
+
+        padding:30px 20px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.6rem;
+
+    }
+
+    .hero p{
+
+        font-size:1.05rem;
+
+    }
+
+    .hero-gif{
+
+        width:170px;
+
+    }
+
+    .section{
+
+        width:94%;
+
+        margin:35px auto;
+
+        padding:30px 22px;
+
+    }
+
+    .section h2{
+
+        font-size:1.6rem;
+
+        margin-bottom:22px;
+
+    }
+
+    .section-description{
+
+        font-size:.95rem;
+
+        margin-bottom:22px;
+
+    }
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .video-card{
+
+        padding:18px;
+
+    }
+
+    .letter{
+
+        padding:28px;
+
+    }
+
+    .letter p{
+
+        font-size:1rem;
+
+        line-height:1.9;
+
+    }
+
+    #lightbox-image{
+
+        max-width:95vw;
+
+        max-height:65vh;
+
+    }
+
+    #lightbox-title{
+
+        font-size:1.4rem;
+
+    }
+
+    #lightbox-caption{
+
+        width:90%;
+
+        font-size:.95rem;
+
+    }
+
+}

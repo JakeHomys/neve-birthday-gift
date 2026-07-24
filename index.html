@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Sunmi!</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scrolling-background"></div>
+
+<div id="confetti-container"></div>
+
+<div class="hero">
+
+    <h1>Happy Birthday, Neve!</h1>
+
+    <img
+        src="images/sticker.gif"
+        alt="Sticker"
+        class="hero-sticker"
+    >
+
+<img
+    src="images/fancy.png"
+    alt=""
+    class="hero-divider"
+>
+    <p>
+        Something I made just for you<br>
+        <small>(Small note you can click on any image to make it bigger)</small>
+    </p>
+
+</header>
+
+<section class="section">
+
+    <h2>Bunch of doodles</h2>
+<img
+    src="images/fancy.png"
+    alt=""
+    class="hero-divider"
+>
+    <div class="gallery">
+
+        <div class="card">
+            <img
+                src="drawings/drawing1.png"
+                alt="Drawing 1"
+                onclick="openLightbox(this)"
+                data-title="Swap clothes"
+                data-caption="I just felt like drawing this again"
+            >
+        </div>
+
+        <div class="card">
+            <img
+                src="drawings/drawing2.png"
+                alt="Drawing 2"
+                onclick="openLightbox(this)"
+                data-title="Happy Birthday, nak"
+                data-caption="Smile nak"
+            >
+        </div>
+
+        <div class="card">
+            <img
+                src="drawings/drawing3.png"
+                alt="Drawing 3"
+                onclick="openLightbox(this)"
+                data-title="Festival date headcanon"
+                data-caption="I just imagine them deciding to spend time together at a big school festival."
+            >
+        </div>
+
+        <!--
+        To add another drawing, copy one of the cards above.
+        -->
+
+          <div class="card">
+            <img
+                src="drawings/drawing4.png"
+                alt="Drawing 4"
+                onclick="openLightbox(this)"
+                data-title="Birthday Doodle"
+                data-caption="It's your day today!"
+            >
+
+    </div>
+
+</section>
+
+    <img
+        src="images/waddles.gif"
+        width="400"
+        alt="Sticker"
+        class="hero-sticker"
+    >
+
+<section class="section">
+
+    <h2>Animation gift</h2>
+
+<img
+    src="images/fancy.png"
+    alt=""
+    class="hero-divider"
+>
+
+    <p class="section-description">
+        I started this just this Monday. I was planning to make 2 more but I didn't have much time.
+    </p>
+
+    <div class="video-card">
+
+        <video controls preload="metadata">
+            <source src="videos/animation.mp4" type="video/mp4">
+        </video>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>A "small" message for you.</h2>
+
+<img
+    src="images/fancy.png"
+    alt=""
+    class="hero-divider"
+>
+
+    <div class="letter">
+
+<p>
+Hey Nev, Happy Birthday! 
+
+I hope you're doing well. I know I repeat myself a lot and I probably say the same stuff over and over, but I genuinely wish the best for you.
+
+I also know you're going through a lot right now. Losing your Instagram account is really frustrating, especially since you were making new friends and gaining more moots who appreciated your work. I'm really sorry that happened to you. I know saying sorry won't bring it back, but I truly hope things work out for you. I know coming back feels pointless because we both know our accounts might get banned again eventually, but I still want you to come back.
+
+I also want to apologize for my own mistakes. If I've ever been neglectful or made you feel like I didn't care about you or about our relationship, I'm really sorry. That was never my intention. I had actually been planning this website and working on the animations ahead of time because I wanted to make something special for your birthday. But I realized that doing that made it seem like I wasn't looking out for you, and I'm sorry.
+
+I'm scared of losing you. I never want us to stop communicating, and I really hope you won't cut me off again. I know this probably sounds corny, but I mean every word. I don't want to lose someone as important to me as you. I know saying sweet things won't fix everything, and my best might not always be enough, but I'm genuinely trying.
+
+More than anything, I just want you to be happy. I want you to feel appreciated, cared for, and loved by the people around you. You really deserve that.
+
+So again, happy birthday, Neve! I hope you'll have an awesome day today, and I hope this year is kinder to you than the last, more birthdays and blessings to come. No matter what happens, I'll always be rooting for you.
+
+Take care of yourself, okay?
+
+I love you.
+</p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+
+    <div class="lightbox-content">
+
+        <img
+            id="lightbox-image"
+            src=""
+            alt="Expanded artwork"
+        >
+
+        <h3 id="lightbox-title"></h3>
+
+        <p id="lightbox-caption"></p>
+
+    </div>
+
+</div>
+
+<footer>
+
+    (July 25, 2026)
+
+</footer>
+
+<script>
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-image");
+const lightboxTitle = document.getElementById("lightbox-title");
+const lightboxCaption = document.getElementById("lightbox-caption");
+
+function openLightbox(img){
+
+    lightbox.style.display = "flex";
+
+    document.body.style.overflow = "hidden";
+
+    lightboxImage.src = img.src;
+
+    lightboxImage.alt = img.alt;
+
+    lightboxTitle.textContent = img.dataset.title || "";
+
+    lightboxCaption.textContent = img.dataset.caption || "";
+
+}
+
+function closeLightbox(e){
+
+    if(e.target === lightbox){
+
+        lightbox.style.display = "none";
+
+        document.body.style.overflow = "auto";
+
+    }
+
+}
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        lightbox.style.display = "none";
+
+        document.body.style.overflow = "auto";
+
+    }
+
+});
+/* ===========================
+   CONFETTI
+=========================== */
+
+const colors = [
+    "#FF9233",
+    "#FFD46B",
+    "#8E8120",
+    "#21878A",
+    "#2569A3",
+    "#B9E84E"
+];
+
+const confettiContainer = document.getElementById("confetti-container");
+
+for(let i = 0; i < 80; i++){
+
+    const piece = document.createElement("div");
+
+    piece.className = "confetti";
+
+    const size = Math.random() * 8 + 5;
+
+    piece.style.width = size + "px";
+    piece.style.height = (size * 0.55) + "px";
+
+    piece.style.left = Math.random() * 100 + "vw";
+
+    piece.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+
+    piece.style.animationDuration =
+        (7 + Math.random() * 8) + "s";
+
+    piece.style.animationDelay =
+        (-Math.random() * 15) + "s";
+
+    piece.style.opacity =
+        0.55 + Math.random() * 0.45;
+
+    piece.style.transform =
+        `rotate(${Math.random() * 360}deg)`;
+
+    confettiContainer.appendChild(piece);
+
+}
+</script>
+
+</body>
+</html>
