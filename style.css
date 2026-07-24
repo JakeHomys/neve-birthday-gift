@@ -486,15 +486,19 @@ footer{
 
     }
 
-    .waddles{
+  .waddles{
 
-        width:260px;
+    display:block;
 
-        max-width:85%;
+    width:380px;
 
-        margin:35px auto;
+    max-width:95%;
 
-    }
+    height:auto;
+
+    margin:35px auto;
+
+}
 
     .hero p{
 
