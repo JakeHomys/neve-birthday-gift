@@ -489,45 +489,63 @@ footer{
 
     .hero{
 
-        min-height:60vh;
+        min-height:auto;
 
-        padding:30px 20px;
+        padding:50px 18px 35px;
 
     }
 
     .hero h1{
 
-        font-size:2.6rem;
+        font-size:2.2rem;
+
+        line-height:1.2;
+
+        margin-bottom:15px;
+
+    }
+
+    .hero-sticker{
+
+        width:90px;
+
+        margin-bottom:10px;
+
+    }
+
+    .hero-divider{
+
+        width:220px;
+
+        margin:5px auto 12px;
 
     }
 
     .hero p{
 
-        font-size:1.05rem;
+        font-size:1rem;
 
-    }
-
-    .hero-gif{
-
-        width:170px;
+        line-height:1.6;
 
     }
 
     .section{
 
-        width:94%;
+        width:95%;
 
-        margin:35px auto;
+        margin:28px auto;
 
-        padding:30px 22px;
+        padding:25px 18px;
+
+        border-radius:24px;
 
     }
 
     .section h2{
 
-        font-size:1.6rem;
+        font-size:1.45rem;
 
-        margin-bottom:22px;
+        margin-bottom:18px;
 
     }
 
@@ -535,7 +553,7 @@ footer{
 
         font-size:.95rem;
 
-        margin-bottom:22px;
+        margin-bottom:20px;
 
     }
 
@@ -543,31 +561,71 @@ footer{
 
         grid-template-columns:1fr;
 
+        gap:18px;
+
+    }
+
+    .card{
+
+        border-radius:18px;
+
     }
 
     .video-card{
 
-        padding:18px;
+        padding:15px;
+
+        border-radius:18px;
+
+    }
+
+    .video-card video{
+
+        border-radius:12px;
 
     }
 
     .letter{
 
-        padding:28px;
+        padding:0;
 
     }
 
     .letter p{
 
-        font-size:1rem;
+        font-size:.97rem;
 
-        line-height:1.9;
+        line-height:1.85;
+
+        word-break:break-word;
+
+    }
+
+    .hero-divider{
+
+        max-width:80%;
+
+    }
+
+    .hero img{
+
+        max-width:100%;
+
+        height:auto;
+
+    }
+
+    .section img{
+
+        max-width:100%;
+
+        height:auto;
 
     }
 
     #lightbox-image{
 
-        max-width:95vw;
+        max-width:94vw;
 
         max-height:65vh;
 
@@ -575,15 +633,23 @@ footer{
 
     #lightbox-title{
 
-        font-size:1.4rem;
+        font-size:1.35rem;
 
     }
 
     #lightbox-caption{
 
-        width:90%;
+        font-size:.92rem;
 
-        font-size:.95rem;
+        width:92%;
+
+    }
+
+    footer{
+
+        padding:40px 15px;
+
+        font-size:.9rem;
 
     }
 
